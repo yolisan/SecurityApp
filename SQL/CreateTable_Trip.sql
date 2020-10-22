@@ -1,0 +1,15 @@
+CREATE TABLE Trip(
+TripID int NOT NULL PRIMARY KEY,
+Passenger varchar(255),
+CompanyNumber varchar(255),
+OperatorRole varchar(255),
+Department varchar(255),
+DestinationID int FOREIGN KEY REFERENCES Destination(DestinationID),
+ReasonID int FOREIGN KEY REFERENCES Reason(ReasonID),
+VehicleID int FOREIGN KEY REFERENCES Vehicle(VehicleID),
+KM_In real,
+KM_Out real,
+Time_In time,
+Time_Out time,
+NoOfPassengers int,
+)
